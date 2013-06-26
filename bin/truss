@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+#require 'truss'
+require File.expand_path('../../lib/truss/generators/application', __FILE__)
+require File.expand_path('../../lib/truss/version', __FILE__)
+
+if ['--version', '-v'].include?(ARGV.first)
+    puts "Truss #{Truss::VERSION}"
+    exit(0)
+end
+
+if ARGV.first != "new"
+    ARGV[0] = "--help"
+else
+    ARGV.shift
+end
+
+Truss::Generators::Application.start
