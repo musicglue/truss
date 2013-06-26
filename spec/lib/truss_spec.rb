@@ -15,7 +15,7 @@ describe Truss do
       end
 
       its(:root)        { should eq(FileUtils.pwd) }
-      its(:environment) { should eq(:development) }
+      its(:environment) { should eq(:test) }
     end
 
     context "supports custom options" do

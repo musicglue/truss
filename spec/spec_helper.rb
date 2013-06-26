@@ -1,4 +1,5 @@
 require 'rubygems'
+ENV['RACK_ENV'] = 'test'
 
 module SharedContext
   def self.included(klass)
