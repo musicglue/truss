@@ -22,7 +22,7 @@ module SharedContext
   end
 end
 
-if defined?(PLATFORM) && PLATFORM =~ /java/
+if RUBY_ENGINE =~ /rbx/ || RUBY_ENGINE =~ /jruby/
   include SharedContext
   require 'truss'
 else
