@@ -22,7 +22,7 @@ module SharedContext
   end
 end
 
-if RUBY_ENGINE =~ /rbx/ || RUBY_ENGINE =~ /jruby/
+if RUBY_ENGINE =~ /(rbx|jruby)/
   include SharedContext
   require 'truss'
 else
