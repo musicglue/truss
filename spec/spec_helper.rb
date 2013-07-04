@@ -24,6 +24,7 @@ end
 
 if defined?(PLATFORM) && PLATFORM =~ /java/
   include SharedContext
+  require 'truss'
 else
   require 'spork'
   Spork.prefork do

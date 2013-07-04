@@ -1,3 +1,5 @@
+require 'truss/config'
+
 describe Truss::Config do
   it { should respond_to(:root) }
   it { should respond_to(:environment) }
